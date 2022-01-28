@@ -24,6 +24,7 @@ const currentIndex = ref(0)
   justify-content: center;
   align-items: center;
 }
+
 body {
   margin: 0;
   height: 100vh;
