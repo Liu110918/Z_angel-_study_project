@@ -2,9 +2,7 @@
 import { reactive, ref, getCurrentInstance } from 'vue'
 import { useRouter } from 'vue-router'
 import type { ElForm } from 'element-plus'
-
 const router = useRouter()
-
 // 登录表单
 type FormInstance = InstanceType<typeof ElForm>
 const ruleFormRef = ref<FormInstance>()

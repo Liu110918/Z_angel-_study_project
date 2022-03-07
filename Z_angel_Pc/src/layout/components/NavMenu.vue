@@ -1,5 +1,5 @@
 <template>
-  <el-menu :default-active="$route.path" class="el-menu-vertical-demo" :collapse="isCollapse" :router="true">
+  <el-menu :default-active="$route.path" :collapse="isCollapse" :router="true">
     <template v-for="item in navMenu">
       <el-menu-item v-if="!item.children" :key="item.name" :index="item.path">
         <template #title>{{ item.name }}</template>
@@ -18,13 +18,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-import { defineProps } from '@vue/runtime-core'
-const props = defineProps({
-  isCollapse: {
-    typeof: Boolean,
-    default: false
-  }
-})
+
 const route = useRouter()
 const navMenu = [...route.options.routes][2].children
 </script>
